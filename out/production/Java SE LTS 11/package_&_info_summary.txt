@@ -1,0 +1,25 @@
+Package and Import Summary
+
+The package statement is used to group classes into a logical set of classes, that have some commonality.
+
+* Only one package can be defined in a .java source file.
+* The package statement must be the first line of code(excluding comments and empty lines).
+* No package statement makes the class, or type you define, belong to the unnamed package.
+
+
+ To have the compiler create class files in exploded directories, that represent your package names:
+
+ * use javac -d {directory} foo.java, where {directory} represents the directory you want the package directories to be created ( {.} = . means current working directory).
+ * A class file does not have to reside in a directory structure, that represents its package structure.
+
+ To reference a class in a package, you must:
+
+ * Use a Full Qualified Class Name (FQCN)
+ * Or include an import statement for the package class name.
+
+ Import statements are used to inform the compiler, where the classes outside the current package, are defined while allowing easier readability.
+
+ You could write all code without a single import statement, using just fully qualified class names, but it is harder to read.
+
+ * You can have 0 to many import statements.
+ * Import statements must follow any package statement, and precede any other code, excluding comments and empty lines.
