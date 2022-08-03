@@ -1,0 +1,100 @@
+Primitive Data Type Recap
+
+    * Java supports two types of data, reference data types and primitive data types.
+    * The data value of a primitive data type is stored in memory. and is not a location reference to the data.
+    * This makes accessing primitive data types faster and leads to more efficient performance when it really matters.
+    * Unlike C#, these are NOT objects.
+    * Because Java allows primitive data types which do not inherit form 'Object' like every other instance, Java is not considered to be a 'pure' object-oriented language.
+
+There are 8 primitive data types as shown on the slide. The first five are represented in two's complement format, which is important, especially for the 4 signed primitives,
+where the left most bit represents the sign.
+
+Float & Double are floating point representations and approximations, and will not overflow - these are used when precision after the decimal point is critical.
+
+Note that Java supports a wrapper object (a true reference data type) for each primitive data type.
+
+
+[Primitive Data Type]             [Storage in bits]        [Wrapper]
+ byte                      |  8                       | Byte                   |
+ char                      |  16                      | Character              |
+ short                     |  16                      | Short                  |
+ int*                      |  32                      | Integer                |
+ long                      |  64                      | Long                   |
+ float                      |  32                      | Float                  |
+ double*                   |  64                      | Double                 |
+ boolean                   |  1                       | Boolean                |
+
+
+Declaring Primitive Types
+
+    * A declaration consists of the data type & variable name.
+    * A variable name must be a valid identifier.
+    * You can identify multiple variables of the same type on a single line, but not multiple variables of different types.
+    * Data in the form of literals can be assigned to these variables.
+    * The exam explores some implications of setting literal data to typed variables where there is a type mismatch.
+
+    * An unmodified integer value is assumed to be 32 bit int primitive.
+    * A value containing a decimal point is assumed to be 64 bit double.
+    * In Java, a single character value in single quotes is considered a valid char literal, but any characters surrounded by double quotes is considered to be a string literal.
+    * In some cases numeric literals will have a suffix.
+    * Valid suffixes exist for types long, float and double and case of the suffix does not matter, which force the literal value being assigned to be the type specified by the suffix.
+
+
+Local Variable Initialization
+
+    * To use a primitive data variable in code, you must initialize it.
+    * This is not true for class static variables and instance variables which will have default values assigned to them.
+    * This initialization or lack thereof is a common theme in the exam questions.
+    * So we've learned that it's okay to have an uninitialized local variable as long as you never use. A good IDE will prompt you to get rid of this variable.
+    * You will never get a compile error if the local variable is not initialized and then referenced as we've just seen.
+    * A primitive data type can be initialized and/or assigned a literal value, which we discussed somewhat in the previous video, or it can be assigned to other variables.
+
+    Summarize
+    * A local variable is not initialized with a default value;
+    * You must initialize fully (not in a conditional statement / switch statement/ while loop if all conditions are not met) if you are using the variable in code.
+    * If you never use the variable, no compiler error occurs.
+
+    *** Partial initialization of a local variable is a compile error.
+    some examples are:
+     * Initialization in an if statement block w/o a corresponding else block.
+     * Initialization in a switch statement but not in a default statement.
+     * Initialization in a while loop, note that do/while always executed once, so that's okay.
+
+
+Narrowing and Widening
+
+    * Narrowing is when you assign a larger primitive data literal or variable to a smaller one.
+    * Widening is when you are putting something small in a larger variable.
+    * As you can imagine, the compiler is more forgiving with widening attempts, and has more constraints on narrowing.
+    * So why not just use doubles and longs everywhere? Well you could, but you'd be eating up as much as twice the memory unnecessarily.
+    * Every numeric value literal that does not contain a decimal point is a 32 bit int.
+    * Every numeric literal with a decimal is a double.
+
+
+Casting
+
+    * There are times when you want to force the compiler to overlook its narrowing and widening checks, because you have the knowledge of the actual values occurring in the program during execution.
+    * You can do this using casting.
+    * You can cast by referencing the type you want to be widened, or narrowed to in parentheses preceding the variable or value that is to be converted.
+    * (widening) You can cast to a larger sized variable - This is the more common case and poses less risk since there is no risk of loss of value.
+    * (narrowing) You can cast to a smaller sized variable - There may be a valid case for this, however be aware that unexpected results may occur.
+    * Perhaps you want to use a method that requires a smaller variable type and you know your value will not exceed the small variable range at the time of execution.
+
+    ** The problem with casting is that if your value does not fall into the valid value range, your data may underflow or overflow.
+    * Underflow is defining or casting a value less than the minimum value for the datatype.
+    * Overflow is defining or casting a value greater than the maximum value for the datatype.
+
+    * In some cases you might want to cast to a less precise data type, from a float or double to an int or long, for example. This will truncate the number to a whole number.
+
+
+Declare & Initialize Variables: Things to Remember
+
+    * Literals w/ decimal default to double, not float.
+    * Doubles and floats do not overflow, since they are approximated.
+    * Local variable primitives are not initialized.
+    * Class static and instance members are initialized.
+    * Null is not a valid type for a primitive data type.
+
+
+
+
