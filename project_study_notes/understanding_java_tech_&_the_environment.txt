@@ -1,0 +1,13 @@
+Understanding Java Technology and the Environment
+
+'Why Java?' and your responses could contain:
+
+* Java is derived from C, C++ but simplified
+* Java is Architecture neutral
+* Java is Object-Oriented
+* Java is statically typed
+* Java is a dynamic programming language
+* Java supports Multi-threaded processing
+* Distributed Computing is supported by java
+* Memory management is handled by the Java environment, and not the developer
+

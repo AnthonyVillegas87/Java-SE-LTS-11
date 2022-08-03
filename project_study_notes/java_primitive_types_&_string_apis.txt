@@ -1,0 +1,42 @@
+Primitive Data Type Recap
+
+    * Java supports two types of data, reference data types and primitive data types.
+    * The data value of a primitive data type is stored in memory. and is not a location reference to the data.
+    * This makes accessing primitive data types faster and leads to more efficient performance when it really matters.
+    * Unlike C#, these are NOT objects.
+    * Because Java allows primitive data types which do not inherit form 'Object' like every other instance, Java is not considered to be a 'pure' object-oriented language.
+
+There are 8 primitive data types as shown on the slide. The first five are represented in two's complement format, which is important, especially for the 4 signed primitives,
+where the left most bit represents the sign.
+
+Float & Double are floating point representations and approximations, and will not overflow - these are used when precision after the decimal point is critical.
+
+Note that Java supports a wrapper object (a true reference data type) for each primitive data type.
+
+
+[Primitive Data Type]             [Storage in bits]        [Wrapper]
+ byte                      |  8                       | Byte                   |
+ char                      |  16                      | Character              |
+ short                     |  16                      | Short                  |
+ int*                      |  32                      | Integer                |
+ long                      |  64                      | Long                   |
+ float                      |  32                      | Float                  |
+ double*                   |  64                      | Double                 |
+ boolean                   |  1                       | Boolean                |
+
+
+Declaring Primitive Types
+
+    * A declaration consists of the data type & variable name.
+    * A variable name must be a valid identifier.
+    * You can identify multiple variables of the same type on a single line, but not multiple variables of different types.
+    * Data in the form of literals can be assigned to these variables.
+    * The exam explores some implications of setting literal data to typed variables where there is a type mismatch.
+
+    * An unmodified integer value is assumed to be 32 bit int primitive.
+    * A value containing a decimal point is assumed to be 64 bit double.
+    * In Java, a single character value in single quotes is considered a valid char literal, but any characters surrounded by double quotes is considered to be a string literal.
+    * In some cases numeric literals will have a suffix.
+    * Valid suffixes exist for types long, float and double and case of the suffix does not matter, which force the literal value being assigned to be the type specified by the suffix.
+    *
+
