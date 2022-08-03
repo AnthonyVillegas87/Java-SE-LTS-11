@@ -1,0 +1,39 @@
+
+Scope
+
+ * As per Oracle's Java Specification states "The scope of a declaration is the region of the program within which the entity declared by the declaration can be referred
+    to using a simple name, provided it is visible."
+ * A local variable, formal parameter, exception parameter, and local class can only be referred to using a simple name, not a qualified name.
+ * Because of this, some declarations are not permitted within the scope of these elements.
+ * This can be re-stated - if you cannot qualify a variable name in its current scope, you cannot create a another local variable name in a more limited scope.
+
+ There are several scopes you'll need to understand and will be tested on when creating local variables.
+
+         [Scope]                         [Qualifier]
+======================================================
+Class                           | {DefinedClassType}
+Instance                        |   this
+Method                          |   none
+Loop                            |   none
+Loop Back                       |   none
+Block including Exception Block |   none
+======================================================
+
+
+    * In short, the best way to quickly see if your local variable definition is going to raise a compile error is to ask yourself if you can qualify if you can qualify it by class type,
+        or the words this, or super, etc.
+    * If you cannot, and it has already been defined in an outer scope, then it will cause an error.
+    * Shadowing is when a local variable is legally declared, but another declaration that can be qualified is not used or accessed because the local variable takes precedence.
+
+
+
+
+Local Variable Scope: Out of Ordinary Concepts
+
+    * You can define a nested or inner class within a method which seems to break the local variable rule we learned.
+    * If you can remember that a class defined locally has an implied qualifier applied to any attributes and methods in the outer class, you can keep track of your variables.
+    * An inner class has an implied qualifier reference to the outer class object and its attributes and methods.
+
+
+
+

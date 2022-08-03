@@ -6,7 +6,7 @@ Primitive Data Type Recap
     * Unlike C#, these are NOT objects.
     * Because Java allows primitive data types which do not inherit form 'Object' like every other instance, Java is not considered to be a 'pure' object-oriented language.
 
-There are 8 primitive data types as shown on the slide. The first five are represented in two's complement format, which is important, especially for the 4 signed primitives,
+There are 8 primitive data types as shown in the table. The first five are represented in two's complement format, which is important, especially for the 4 signed primitives,
 where the left most bit represents the sign.
 
 Float & Double are floating point representations and approximations, and will not overflow - these are used when precision after the decimal point is critical.
