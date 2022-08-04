@@ -10,3 +10,95 @@ Strings
     * Reminder : Strings are immutable, meaning they cannot be changed.
     * Once you create a String, with a string literal, for example "Hello", that string remains "Hello" on the string pool with a single reference to it.
     * If you do a string concatenation, you are not changing the current String, but creating a new String object with the concatenated Strings.
+
+
+    String Summary
+
+    * Literal Strings have their own special area of the heap memory called the String pool.
+    * Any assignment of a literal will refer to the same String in this pool.
+    * You can force a string to be added to the pool by calling the intern() method on the String object.
+    * Strings are immutable, any methods that seem to operate on a String are actually creating new Strings, and these new Strings need to be assigned to the same variable
+        (self assignment) or assigned to a new variable which represents a reference to the new String.
+
+
+
+String Concatenation
+
+    * The most common method of manipulating strings in Java is the Concatenation operator, the Concatenation operator for a string is '+'.
+
+    Reference Variables
+
+    * When you concatenate a string to a reference variable, if the variable is a reference type, the toString() method on the object is called, if the variable is a primitive
+        data type, the variable is boxed to a wrapper, and it's toString() method is called.
+
+
+Manipulating Strings
+
+    * The String object methods are too numerous to review individually, and you are probably familiar with many of them.
+    * The thing to remember about the String object is that the index of the first character is always zero, and the index of the last character is the string length minus one.
+        (string.length() - 1).
+
+    * Many string methods use a starting and ending index to copy, replace, or search through the string.
+    * The beginning index used in these methods is INCLUSIVE, which means the method will use the character at the beginning index, so if you want the first character of
+        your string sed as part of the manipulation, your starting index would be zero.
+    * The ending index used in these methods is EXCLUSIVE, which means the character at the ending index will not be included, so if you want to include the last character
+        in your string, your ending index would be string.length().
+
+    Comparison Methods :
+
+    * equals()  - is the same as ==, but String equals tests for String & tests value    / returns true if references are the same, or if parameter OBJ is a String & the value is the same
+    * equalsIgnoreCase() - Tests string value ignoring case   / returns true if 2 strings have the same value ignoring case.
+    * contentEquals() - Compares the value of String to the value in the parameter /  returns true if values in String & the parameter are the same.
+    * compareTo() - Compares the value of String to the value in the parameter  /  returns 0 if values in Strings are the same : returns negative or positive number if Strings are not equal
+    * isEmpty()
+    * isBlank()
+
+    Text Search Methods :
+
+    * contains()
+    * equalsIgnoreCase()
+    * endsWith()
+    * indexOf()
+    * lastIndexOf()
+    * matches()
+    * startsWith()
+
+    Text Manipulation Methods :
+
+    * concat()
+    * join(introduced in java 8)
+    * replace()
+    * replaceAll()
+    * replaceFirst()
+    * split()
+    * substring()
+    * subSequence()
+
+    Text Transformation Methods :
+
+    * chars(introduced in Java 9)
+    * codePoints(introduced in Java 9)
+    * format()
+    * lines(introduced in Java 11)
+    * repeat(introduced in Java 11)
+    * strip()
+    * stripLeading()
+    * stripTrailing()
+    * toCharArray()
+    * toLowerCase()
+    * toUpperCase()
+    * trim()
+    * valueOf()
+
+Manipulate Data Using the StringBuilder Class
+
+    * StringBuilder objects are mutable.
+    * Strings should always be used unless StringBuilder offers an advantage in terms of simpler code or better performance.
+    * For example, if you need to concatenate a large number of strings, such as a temporary error message, or dynamic XML or HTML, then appending to a StringBuilder object is more efficient.
+    * Every StringBuilder has a capacity which is the number of character spaces allotted to it.
+    * Capacity is automatically extended as additions are made to the StringBuilder object.
+    * The StringBuilder Class has a series of append methods and insert methods.
+    * The append methods simply add data to the end of the current value of the StringBuilder, expanding capacity if needed.
+    * The insert methods insert the specified data into the StringBuilder value at the specified starting index.
+
+
