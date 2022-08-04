@@ -1,0 +1,34 @@
+Local Variable Type Inference
+
+    * Local Variable Type Inference (LVTI) is also known as var declaration.
+    * This is a Java 10 feature introduced to reduce the verbosity of code.
+    * This feature is only available for local variable inside a method body.
+
+What it is:
+    * A shortcut to reduce verbosity of code.
+
+What it is NOT:
+    * A data type, the data type must be able to be inferred by compiler when using it.
+    * A keyword, you can actually use the text 'var' as an identifier.
+
+    IMPORTANT: var is not a type, it's short hand
+
+    It can only be used inside methods for local variables, and the type of variable on the right side of equation must be inferable by compiler, to avoid compilation errors.
+
+Out of Ordinary Concepts:
+
+    * Var is NOT to be confused with variable type.
+    * Just because you define a local variable with the var designation, it does not mean it is a variable type.
+    * The type is inferred by it's initialization, and cannot be changed.
+    * All the narrowing, widening rules for the inferred type apply.
+  You can't use LVTI for:
+
+    * Class or instance variables.
+    * Method return types.
+    * Method parameters.
+    * Constructor parameters.
+
+  You can use Local Variable Type Inference for:
+
+    * Local variables in methods & code blocks.
+    * Loop variables
