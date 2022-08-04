@@ -1,0 +1,12 @@
+Strings
+
+    * A string in java is an object of the class java.lang.String and represents an array or series of characters, but is NOT an array of the primitive type char.
+    * When a string is created w/o a constructor, aka not using new, the string is stored in a special area of the heap called the string pool, whose purpose is to maintain
+        a set of unique strings - this is called interning.
+
+    * You can manually intern, using the intern method on a String object.
+    *  When you assign two variables to the same string literal, these strings are considered equal and the comparator == evaluates to true.
+
+    * Reminder : Strings are immutable, meaning they cannot be changed.
+    * Once you create a String, with a string literal, for example "Hello", that string remains "Hello" on the string pool with a single reference to it.
+    * If you do a string concatenation, you are not changing the current String, but creating a new String object with the concatenated Strings.
