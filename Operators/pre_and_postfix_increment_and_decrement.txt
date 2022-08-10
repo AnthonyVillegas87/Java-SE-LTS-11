@@ -1,0 +1,15 @@
+Pre and Postfix Increment and Decrement Operators
+
+    First explored will be prefix decrement, prefix increment and postfix decrement, postfix increment operators.
+        * It is very important to remember that the postfix decrement and postfix increment operators, do not change the value of its unary operand, until the expression it is operating in is considered completed OR the
+            operand is used again in the same statement.
+        * Remember that the unary variable being operated on does get operated(the value at the end is either incremented or decremented) but any assignments, or expressions this statement is part of, will be using
+            the unchanged value until the expression statement is evaluated successfully.
+        * If the statement is interrupted somehow, then the postfix increment or decrement may not actually be applied.
+        * It needs to be noted that the increment and decrement operators are changing the value contained in the reference itself.
+        * If you make the statement a++, you are incrementing the value in the variable a. These operands can be stand-alone statements.
+        * This is different for example from the unary minus -a, which has no impact on the value in the operand itself, and cannot be a statement on its own.
+        * It's output must be assigned or used in an expression.
+        * The unary minus returns a negative value if the value in the operand is positive, and a positive value in the operand is negative.
+        * The unary plus returns a value with the sme sign as the operand, and has no effect on the value.
+        * Both operators, will however, promote the return values to an int.
